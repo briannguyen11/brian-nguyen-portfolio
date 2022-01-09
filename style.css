@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FAF9F6;
+    font-family: "Poppings", sans-serif;
+}
+
+nav li, a, button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 30px;
+    background: rgb(38,70,83);
+    background: linear-gradient(135deg, rgba(38,70,83,1) 25%, rgba(233,196,106,1) 50%, rgba(231,111,81,1) 75%);
+}
+
+header img{
+    border-radius: 50px;
+    margin: 0px 10px
+}
+
+header a.only{
+    margin-right: auto;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0px 15px;
+}
+
+nav li a {
+    transition: all 0.3s ease 0s;
+}
+
+nav li a:hover {
+    color: rgb(36, 49, 53);
+}
+
+button {
+    padding: 10px 30px;
+    background-color: rgb(36, 49, 53);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 5px;
+
+}
+
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+
+h1 {
+    margin: 0px 20px;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-right: 25px;
+}
+
+td {
+    vertical-align: top;
+    padding: 2px 10px 2px 0px;
+}
+
+.grid-parent {
+    color: #000;
+    display: grid;
+    font-family: "Poppins", sans-serif;
+    margin: 0px 20px;
+    grid-template-columns: 1fr;
+}
+
+footer {
+    color: #fff;
+    background-color: rgb(36, 49, 53);
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    padding: 25px 20px;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-content{
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 14px;
+    padding: 10px 0px;
+}
+
+.footer-content a{
+    font-size: 25px;
+    margin: 45px 10px;
+}
+
+.footer-bottom{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+/* Section Specific to Resume Page */
+
+@media screen and (min-width: 800px) {
+    .resume {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(4, fr);
+    }
+
+    .section-title{
+        border-bottom: 1px solid #000;
+    }
+
+    .education.section-title {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .education.section-content {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    
+    .skills.section-title {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    .skills.section-content {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    
+    .awards-honors.section-title {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    
+    .awards-honors.section-content {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+    
+    .extracurricular.section-title {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        border-bottom: none;
+    }
+    
+    .extracurricular.section-content {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+        border-bottom: none;
+    }
+}
+
+.section-content, .section-title {
+    line-height: 1.5;
+    padding: 50px 25px;
+}
+
+.section-content {
+    border-bottom: 1px solid #000;
+}
+
+.extracurricular.section-content {
+    border-bottom: none;
+}
+
+/* Section Specific to Projects Page */
+
+@media screen and (min-width: 800px) {
+    .project {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .project-content {
+        border-bottom: 1px solid #000;
+    }
+
+    .DAC.project-content {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    
+    .DAC.media{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    
+    .grid-game.project-content {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    .grid-game.media{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    
+    .AI.project-content {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        border-bottom: none;
+    }
+    
+    .AI.media , .figcaption{
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        text-align: center;
+        color: #000;
+        font-size: 12px;
+        padding: 10px 0px;
+        border-bottom: none;
+    }
+}
+
+
+.project-content {
+    line-height: 1.5;
+    padding: 50px 25px;
+}
+
+.media {
+    border-bottom: 1px solid #000;
+}
+
+.project img {
+    padding: 20px 20px; 
+    object-fit: contain;
+    width:100%;
+    max-height: 400px; 
+}
+
+.AI.media, .figcaption {
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    border-bottom: none;
+}
+
+.figcaption:hover {
+    color: rgba(0,136,169);
+}
+
+
+
+/* Section Specific to Homepage */
+
+.grid-parent.homepage {
+    display: grid;
+    margin-top: 25px;
+}
+
+.intro-media img{
+    object-fit: contain;
+    width:100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+.intro-content h1{
+    padding-bottom: 20px;
+    font-size: 100px;
+    text-align: center;
+}
+
+.intro-content {
+    text-align: center;
+    padding: 75px;
+}
+
+.intro-media {
+    padding: 50px;
+}
+
+.homepage div{
+    display:inline-flex
+}
+
+.homepage button {
+    object-fit: contain;
+    width:200px;
+    height:200px;
+    color: white;
+    border-radius: 50%;
+    margin: 50px 5px 0px 5px;
+}
+
+.resume-button button{
+    background-color: rgba(38,70,83,1);
+}
+
+.project-button button{
+    background-color: rgba(233,196,106,1);
+}
+
+.contact-button button{
+    background-color: rgba(231,111,81,1);
+}
+
+.resume-button button:hover, .homepage .project-button button:hover, .contact-button button:hover {
+    background-color: rgb(36, 49, 53)
+}
+
+@media screen and (min-width: 1100px) {
+    .homepage {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        margin: 50px 50px;
+    }
+    
+    .intro-media {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .intro-content {
+        grid-column: 2 / 3;
+        text-align: center;
+    }
+}
+
+
+/* Section specific to Contact page */
+.contact-box {
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+form{
+    margin: 35px;
+}
+
+.contact-box h1 {
+    text-align: center;
+}
+
+.input-field {
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #777;
+    border-radius: 14px;
+    outline: none;
+    background-color: #FAF9F6;
+}
+
+.textarea-field {
+    height: 150px;
+    padding-top: 10px;
+}
+
+::placeholder {
+    font-family: "Poppins", sans-serif;
+    color: #000;
+}
+
+.btn {
+    margin-top: 18px;
+}
+
+.contact-footer {
+    bottom: 0;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
